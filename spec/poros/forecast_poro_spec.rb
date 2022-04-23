@@ -7,7 +7,9 @@ RSpec.describe ForecastPoro do
       weather_data = OpenWeatherService.find_weather(39.738453, -104.984853)
       data = ForecastPoro.new(weather_data)
 
-      expect(data).to be_an(ForecastPoro)
+      expect(data).to be_a(ForecastPoro)
+      expect(data.current_weather).to be_a(CurrentWeather)
+      expect(data.daily_weather.first).to be_a(DailyWeather)
     end
   end
 end
