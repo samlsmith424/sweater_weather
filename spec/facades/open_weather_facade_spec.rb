@@ -5,7 +5,7 @@ RSpec.describe 'open weather facade' do
     VCR.use_cassette("open weather facade") do
       weather_info = OpenWeatherFacade.get_weather(39.738453, -104.984853)
 
-      expect(weather_info).to be_an(OpenWeatherPoro)
+      expect(weather_info).to be_an(ForecastPoro)
     end
   end
 end
