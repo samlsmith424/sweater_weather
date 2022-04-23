@@ -46,6 +46,32 @@ RSpec.describe 'weather endpoint' do
 
       expect(current_weather).to have_key(:icon)
       expect(current_weather[:icon]).to be_a(String)
+
+      expect(parsed[:data][:attributes]).to have_key(:daily_weather)
+      expect(parsed[:data][:attributes][:daily_weather]).to be_an(Array)
+      daily_weather = parsed[:data][:attributes][:daily_weather]
+      daily_weather.each do |d|
+        expect(d).to have_key(:date)
+        expect(d[:date]).to be_a(String)
+
+        expect(d).to have_key(:sunrise)
+        expect(d[:sunrise]).to be_a(String)
+
+        expect(d).to have_key(:sunset)
+        expect(d[:sunset]).to be_a(String)
+
+        expect(d).to have_key(:max_temp)
+        expect(d[:max_temp]).to be_a(Float)
+
+        expect(d).to have_key(:min_temp)
+        expect(d[:min_temp]).to be_a(Float)
+
+        expect(d).to have_key(:conditions)
+        expect(d[:conditions]).to be_a(String)
+
+        expect(d).to have_key(:icon)
+        expect(d[:icon]).to be_a(String)
+      end
     end
   end
 end
