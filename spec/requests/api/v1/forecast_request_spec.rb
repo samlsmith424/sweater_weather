@@ -6,6 +6,7 @@ RSpec.describe 'weather endpoint' do
       location = "Denver, CO"
       get "/api/v1/forecast?location=#{location}"
 
+      # require "pry"; binding.pry
       expect(response).to be_successful
     end
   end
