@@ -10,6 +10,7 @@ RSpec.describe ForecastPoro do
       expect(data).to be_a(ForecastPoro)
       expect(data.current_weather).to be_a(CurrentWeather)
       expect(data.daily_weather.first).to be_a(DailyWeather)
+      expect(data.hourly_weather.first).to be_a(HourlyWeather)
     end
   end
 end
