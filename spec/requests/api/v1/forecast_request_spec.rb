@@ -5,9 +5,47 @@ RSpec.describe 'weather endpoint' do
     VCR.use_cassette("Denver location and weather") do
       location = "Denver, CO"
       get "/api/v1/forecast?location=#{location}"
-
-      # require "pry"; binding.pry
       expect(response).to be_successful
+
+      parsed = JSON.parse(response.body, symbolize_names: true)
+      expect(parsed).to be_a(Hash)
+      expect(parsed).to have_key(:data)
+      expect(parsed[:data]).to have_key(:id)
+      expect(parsed[:data][:id]).to eq(nil)
+      expect(parsed[:data]).to have_key(:attributes)
+      expect(parsed[:data][:attributes]).to be_a(Hash)
+      expect(parsed[:data][:attributes]).to have_key(:current_weather)
+
+      current_weather = parsed[:data][:attributes][:current_weather]
+      expect(current_weather).to have_key(:datetime)
+      expect(current_weather[:datetime]).to be_a(String)
+
+      expect(current_weather).to have_key(:sunrise)
+      expect(current_weather[:sunrise]).to be_a(String)
+
+      expect(current_weather).to have_key(:sunset)
+      expect(current_weather[:sunset]).to be_a(String)
+
+      expect(current_weather).to have_key(:temperature)
+      expect(current_weather[:temperature]).to be_a(Float)
+
+      expect(current_weather).to have_key(:feels_like)
+      expect(current_weather[:feels_like]).to be_a(Float)
+
+      expect(current_weather).to have_key(:humidity)
+      expect(current_weather[:humidity]).to be_a(Integer)
+
+      expect(current_weather).to have_key(:uvi)
+      expect(current_weather[:uvi]).to be_a(Float)
+
+      expect(current_weather).to have_key(:visibility)
+      expect(current_weather[:visibility]).to be_a(Integer)
+
+      expect(current_weather).to have_key(:conditions)
+      expect(current_weather[:conditions]).to be_a(String)
+
+      expect(current_weather).to have_key(:icon)
+      expect(current_weather[:icon]).to be_a(String)
     end
   end
 end
