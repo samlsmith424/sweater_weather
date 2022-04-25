@@ -11,7 +11,7 @@ RSpec.describe 'yelp restaurant service' do
       expect(restaurant[:businesses][0]).to have_key(:name)
       expect(restaurant[:businesses][0][:name]).to be_a(String)
       expect(restaurant[:businesses][0][:location]).to be_a(Hash)
-      expect(restaurant[:businesses][0][:location][:display_address].join).to be_a(String)
+      expect(restaurant[:businesses][0][:location][:display_address].join(', ')).to be_a(String)
       expect(restaurant[:businesses][0][:categories][0][:alias]).to be_a(String)
     end
   end
