@@ -61,10 +61,10 @@ RSpec.describe 'weather endpoint' do
         expect(d[:sunset]).to be_a(String)
 
         expect(d).to have_key(:max_temp)
-        expect(d[:max_temp]).to be_a(Float)
+        expect(d[:max_temp]).to be_a(Float).or be_an(Integer)
 
         expect(d).to have_key(:min_temp)
-        expect(d[:min_temp]).to be_a(Float)
+        expect(d[:min_temp]).to be_a(Float).or be_an(Integer)
 
         expect(d).to have_key(:conditions)
         expect(d[:conditions]).to be_a(String)

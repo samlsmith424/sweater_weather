@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'create user request' do
-  it 'can create a user' do
+  xit 'can create a user' do
     headers = { "Content-Type" => "application/json" }
     body = {
       "email": "whatever@example.com",
