@@ -12,6 +12,9 @@ RSpec.describe 'munchies request' do
       get "/api/v1/munchies", params: info
 
       expect(response).to be_successful
+
+      body = JSON.parse(response.body, symbolize_names: true)
+      require "pry"; binding.pry
     end
   end
 end
