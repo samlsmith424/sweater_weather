@@ -51,4 +51,18 @@ RSpec.describe 'munchies request' do
       expect(body[:data][:attributes][:restaurant][:address]).to be_a(String)
     end
   end
+
+  it 'returns an error if the params are not sufficient' do
+    VCR.use_cassette("service sad path") do
+      info = {
+        start:  "denver, co"
+        # destination:  "pueblo, co"
+        # food:  "cheese"
+      }
+
+      get "/api/v1/munchies", params: info
+
+      expect(response).to have_http_status(:bad_request)
+    end
+  end
 end
