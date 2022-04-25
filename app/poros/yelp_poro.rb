@@ -5,7 +5,6 @@ class YelpPoro
               :category
 
   def initialize(restaurant_info)
-require "pry"; binding.pry
     @name = restaurant_info[:name]
     @address = restaurant_info[:location][:display_address].join(', ')
     @is_closed = restaurant_info[:is_closed]
