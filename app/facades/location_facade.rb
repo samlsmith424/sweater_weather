@@ -6,6 +6,6 @@ class LocationFacade
 
   def self.get_travel_time(from, to)
     travel_time = LocationService.find_travel_time(from, to)
-
+    x = travel_time[:route][:formattedTime]
   end
 end
