@@ -12,4 +12,12 @@ RSpec.describe 'location facade' do
       expect(location_info.longitude).to eq(-104.984853)
     end
   end
+
+  it 'can get location information' do
+    VCR.use_cassette("travel time facade") do
+      travel_time = LocationFacade.get_travel_time("denver, co", "pueblo, co")
+
+      expect(travel_time).to be_a(String)
+    end
+  end
 end

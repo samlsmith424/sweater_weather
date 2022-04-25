@@ -1,6 +1,7 @@
 class BackgroundService
   def self.find_background(location)
     response = conn.get("/search/photos") do |require|
+      require.params['client_id'] = ENV['unsplash_key']
       require.params['query'] = location
     end
     parse_json(response)
@@ -10,7 +11,7 @@ class BackgroundService
 
   def self.conn
     Faraday.new(url: "https://api.unsplash.com") do |require|
-      require.params['client_id'] = ENV['unsplash_key']
+      require.params['key'] = ENV['mapquest_key']
     end
   end
 
