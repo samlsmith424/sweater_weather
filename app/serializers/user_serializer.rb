@@ -1,12 +1,18 @@
 class UserSerializer
-  {
-  "data": {
-    "type": "users",
-    "id": "1",
-    "attributes": {
-      "email": "whatever@example.com",
-      "api_key": "jgn983hy48thw9begh98h4539h4"
-    }
-  }
-}
+  include JSONAPI::Serializer
+  set_id :id
+  set_type :users
+  attributes :email, :auth_token
+  # def self.new(user)
+  #   {
+  #     "data": {
+  #       "type": "users",
+  #       "id": user.id.to_s,
+  #       "attributes": {
+  #         "email": user.email,
+  #         "api_key": user.api_key
+  #       }
+  #     }
+  #   }
+  # end
 end
