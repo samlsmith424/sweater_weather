@@ -24,36 +24,36 @@ http_interactions:
       - keep-alive
       Content-Type:
       - application/json
-      X-Zipkin-Id:
-      - f688877aeffd0a0a
       Ratelimit-Dailylimit:
       - '5000'
       Ratelimit-Remaining:
-      - '4987'
-      X-Routing-Service:
-      - routing-main--uswest2-7844c7f94c-gswj2; site=public_api_v3
-      Ratelimit-Resettime:
-      - '2022-04-26T00:00:00+00:00'
+      - '4994'
       X-B3-Sampled:
       - '0'
+      Ratelimit-Resettime:
+      - '2022-04-27T00:00:00+00:00'
+      X-Routing-Service:
+      - routing-main--uswest2-dbd49b665-2b2db; site=public_api_v3
+      X-Zipkin-Id:
+      - 86cb4ad79bb83daa
       Server:
       - envoy
       X-Cloudmap:
       - routing_uswest2
       X-Proxied:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       X-Extlb:
-      - 10-69-152-12-uswest2bprod
+      - 10-69-173-40-uswest2bprod
       Cache-Control:
       - max-age=0, no-store, private, no-transform
       Accept-Ranges:
       - bytes
       Date:
-      - Mon, 25 Apr 2022 17:35:48 GMT
+      - Tue, 26 Apr 2022 15:59:58 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-sjc10028-SJC
+      - cache-sjc10064-SJC
       X-Cache:
       - MISS
       X-Cache-Hits:
@@ -129,7 +129,7 @@ http_interactions:
         "review_count": 225, "categories": [{"alias": "coffee", "title": "Coffee &
         Tea"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "breakfast_brunch",
         "title": "Breakfast & Brunch"}], "rating": 4.0, "coordinates": {"latitude":
-        38.2640899, "longitude": -104.6141053}, "transactions": ["pickup", "delivery"],
+        38.2640899, "longitude": -104.6141053}, "transactions": ["delivery", "pickup"],
         "price": "$", "location": {"address1": "209 S Union Ave", "address2": "",
         "address3": "", "city": "Pueblo", "zip_code": "81003", "country": "US", "state":
         "CO", "display_address": ["209 S Union Ave", "Pueblo, CO 81003"]}, "phone":
@@ -153,9 +153,20 @@ http_interactions:
         "location": {"address1": "1600 Hwy 50 W", "address2": "", "address3": "",
         "city": "Pueblo", "zip_code": "81008", "country": "US", "state": "CO", "display_address":
         ["1600 Hwy 50 W", "Pueblo, CO 81008"]}, "phone": "+17195424545", "display_phone":
-        "(719) 542-4545", "distance": 6425.277544496396}, {"id": "YG7ozi2bkM8OJDTpyFc4AA",
-        "alias": "roccos-riverside-deli-pueblo", "name": "Rocco''s Riverside Deli",
-        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Qp9RHzNXQU9MWQkuulMSvw/o.jpg",
+        "(719) 542-4545", "distance": 6425.277544496396}, {"id": "Vt0ThK_gcJKX2kdF7zmtRA",
+        "alias": "love-mug-coffee-shop-pueblo", "name": "Love Mug Coffee Shop", "image_url":
+        "https://s3-media2.fl.yelpcdn.com/bphoto/As_-Q3YO090RJWBod3LiDQ/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/love-mug-coffee-shop-pueblo?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
+        "review_count": 50, "categories": [{"alias": "coffee", "title": "Coffee &
+        Tea"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "breakfast_brunch",
+        "title": "Breakfast & Brunch"}], "rating": 4.5, "coordinates": {"latitude":
+        38.3091842332656, "longitude": -104.622146598995}, "transactions": ["pickup",
+        "delivery"], "price": "$", "location": {"address1": "975 US-50", "address2":
+        "", "address3": null, "city": "Pueblo", "zip_code": "81008", "country": "US",
+        "state": "CO", "display_address": ["975 US-50", "Pueblo, CO 81008"]}, "phone":
+        "+17196961175", "display_phone": "(719) 696-1175", "distance": 6063.887602262677},
+        {"id": "YG7ozi2bkM8OJDTpyFc4AA", "alias": "roccos-riverside-deli-pueblo",
+        "name": "Rocco''s Riverside Deli", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/Qp9RHzNXQU9MWQkuulMSvw/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/roccos-riverside-deli-pueblo?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
         "review_count": 93, "categories": [{"alias": "hotdogs", "title": "Fast Food"},
         {"alias": "delis", "title": "Delis"}, {"alias": "sandwiches", "title": "Sandwiches"}],
@@ -186,20 +197,9 @@ http_interactions:
         W Northern Ave", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
         "81005", "country": "US", "state": "CO", "display_address": ["3416 W Northern
         Ave", "Pueblo, CO 81005"]}, "phone": "+17195660067", "display_phone": "(719)
-        566-0067", "distance": 7326.387018283566}, {"id": "Vt0ThK_gcJKX2kdF7zmtRA",
-        "alias": "love-mug-coffee-shop-pueblo", "name": "Love Mug Coffee Shop", "image_url":
-        "https://s3-media2.fl.yelpcdn.com/bphoto/As_-Q3YO090RJWBod3LiDQ/o.jpg", "is_closed":
-        false, "url": "https://www.yelp.com/biz/love-mug-coffee-shop-pueblo?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
-        "review_count": 50, "categories": [{"alias": "coffee", "title": "Coffee &
-        Tea"}, {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "breakfast_brunch",
-        "title": "Breakfast & Brunch"}], "rating": 4.5, "coordinates": {"latitude":
-        38.3091842332656, "longitude": -104.622146598995}, "transactions": ["pickup",
-        "delivery"], "price": "$", "location": {"address1": "975 US-50", "address2":
-        "", "address3": null, "city": "Pueblo", "zip_code": "81008", "country": "US",
-        "state": "CO", "display_address": ["975 US-50", "Pueblo, CO 81008"]}, "phone":
-        "+17196961175", "display_phone": "(719) 696-1175", "distance": 6063.887602262677},
-        {"id": "C7rAUZKTPSK1dKcNqMF6qQ", "alias": "honey-baked-ham-company-pueblo",
-        "name": "Honey Baked Ham Company", "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/WXXtR5fsO4D05REDeiiaNg/o.jpg",
+        566-0067", "distance": 7326.387018283566}, {"id": "C7rAUZKTPSK1dKcNqMF6qQ",
+        "alias": "honey-baked-ham-company-pueblo", "name": "Honey Baked Ham Company",
+        "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/WXXtR5fsO4D05REDeiiaNg/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/honey-baked-ham-company-pueblo?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
         "review_count": 6, "categories": [{"alias": "sandwiches", "title": "Sandwiches"},
         {"alias": "delis", "title": "Delis"}, {"alias": "meats", "title": "Meat Shops"}],
@@ -219,17 +219,8 @@ http_interactions:
         "", "city": "Pueblo", "zip_code": "81004", "country": "US", "state": "CO",
         "display_address": ["114 W Abriendo Ave", "Pueblo, CO 81004"]}, "phone": "+17195450282",
         "display_phone": "(719) 545-0282", "distance": 4407.352360993568}, {"id":
-        "CuuVh9yw3_s8KJxyHc1cTw", "alias": "k-veeze-pueblo-2", "name": "K Veeze",
-        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tZfBp1mWn2rHOW2zlMYY8Q/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/k-veeze-pueblo-2?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
-        "review_count": 1, "categories": [{"alias": "foodtrucks", "title": "Food Trucks"}],
-        "rating": 5.0, "coordinates": {"latitude": 38.20075, "longitude": -104.88909},
-        "transactions": [], "location": {"address1": null, "address2": null, "address3":
-        null, "city": "Pueblo", "zip_code": "81005", "country": "US", "state": "CO",
-        "display_address": ["Pueblo, CO 81005"]}, "phone": "+17194151661", "display_phone":
-        "(719) 415-1661", "distance": 22628.38305224905}, {"id": "EzRN7SLlnP3TavCzUq1UFw",
-        "alias": "southwest-deli-and-cafe-pueblo-2", "name": "Southwest Deli and Cafe",
-        "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FyEjPhgeJuDwF8GUyC9mjA/o.jpg",
+        "EzRN7SLlnP3TavCzUq1UFw", "alias": "southwest-deli-and-cafe-pueblo-2", "name":
+        "Southwest Deli and Cafe", "image_url": "https://s3-media4.fl.yelpcdn.com/bphoto/FyEjPhgeJuDwF8GUyC9mjA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/southwest-deli-and-cafe-pueblo-2?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
         "review_count": 16, "categories": [{"alias": "cafes", "title": "Cafes"}, {"alias":
         "delis", "title": "Delis"}], "rating": 4.5, "coordinates": {"latitude": 38.234975,
@@ -237,7 +228,15 @@ http_interactions:
         {"address1": "1873 S Pueblo Blvd", "address2": null, "address3": "", "city":
         "Pueblo", "zip_code": "81005", "country": "US", "state": "CO", "display_address":
         ["1873 S Pueblo Blvd", "Pueblo, CO 81005"]}, "phone": "+17195645539", "display_phone":
-        "(719) 564-5539", "distance": 8886.775430379514}, {"id": "Fs_TQSs0rE9BYbW2Zn6VwQ",
+        "(719) 564-5539", "distance": 8886.775430379514}, {"id": "CuuVh9yw3_s8KJxyHc1cTw",
+        "alias": "k-veeze-pueblo-2", "name": "K Veeze", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/tZfBp1mWn2rHOW2zlMYY8Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/k-veeze-pueblo-2?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
+        "review_count": 1, "categories": [{"alias": "foodtrucks", "title": "Food Trucks"}],
+        "rating": 5.0, "coordinates": {"latitude": 38.20075, "longitude": -104.88909},
+        "transactions": [], "location": {"address1": null, "address2": null, "address3":
+        null, "city": "Pueblo", "zip_code": "81005", "country": "US", "state": "CO",
+        "display_address": ["Pueblo, CO 81005"]}, "phone": "+17194151661", "display_phone":
+        "(719) 415-1661", "distance": 22628.38305224905}, {"id": "Fs_TQSs0rE9BYbW2Zn6VwQ",
         "alias": "feeling-a-little-philly-pueblo", "name": "Feeling A Little Philly",
         "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/5LSpEXGU0lwuXcM6zRCTEA/o.jpg",
         "is_closed": false, "url": "https://www.yelp.com/biz/feeling-a-little-philly-pueblo?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
@@ -258,17 +257,17 @@ http_interactions:
         {"address1": "1327 S Prairie Ave", "address2": null, "address3": "", "city":
         "Pueblo", "zip_code": "81005", "country": "US", "state": "CO", "display_address":
         ["1327 S Prairie Ave", "Pueblo, CO 81005"]}, "phone": "+17199248014", "display_phone":
-        "(719) 924-8014", "distance": 6926.571654203956}, {"id": "0_-eRxqLrueNJsrT0tiYPQ",
-        "alias": "magpies-pueblo", "name": "Magpies", "image_url": "https://s3-media2.fl.yelpcdn.com/bphoto/YNGavE2fV1MsAXVGUQ73ag/o.jpg",
-        "is_closed": false, "url": "https://www.yelp.com/biz/magpies-pueblo?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
-        "review_count": 16, "categories": [{"alias": "burgers", "title": "Burgers"},
-        {"alias": "sandwiches", "title": "Sandwiches"}, {"alias": "soup", "title":
-        "Soup"}], "rating": 4.0, "coordinates": {"latitude": 38.26383, "longitude":
-        -104.61482}, "transactions": ["delivery"], "price": "$$", "location": {"address1":
-        "229 S Union Ave", "address2": "", "address3": "", "city": "Pueblo", "zip_code":
-        "81003", "country": "US", "state": "CO", "display_address": ["229 S Union
-        Ave", "Pueblo, CO 81003"]}, "phone": "+17195425522", "display_phone": "(719)
-        542-5522", "distance": 3688.5812444189255}], "total": 69, "region": {"center":
-        {"longitude": -104.5733642578125, "latitude": 38.27035217485165}}}'
-  recorded_at: Mon, 25 Apr 2022 17:35:48 GMT
+        "(719) 924-8014", "distance": 6926.571654203956}, {"id": "12iU4OgAC159n8TejLR9rg",
+        "alias": "milberger-farms-pueblo", "name": "Milberger Farms", "image_url":
+        "https://s3-media1.fl.yelpcdn.com/bphoto/eg4TXDqc-NYaH-ENI-sZ5g/o.jpg", "is_closed":
+        false, "url": "https://www.yelp.com/biz/milberger-farms-pueblo?adjust_creative=ah6b55fG7Jdfnl4170AXEQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=ah6b55fG7Jdfnl4170AXEQ",
+        "review_count": 11, "categories": [{"alias": "farmersmarket", "title": "Farmers
+        Market"}], "rating": 3.5, "coordinates": {"latitude": 38.244686960598926,
+        "longitude": -104.51920582678349}, "transactions": [], "price": "$", "location":
+        {"address1": "28570 Hwy 50 E", "address2": "", "address3": "Peppe''s", "city":
+        "Pueblo", "zip_code": "81006", "country": "US", "state": "CO", "display_address":
+        ["28570 Hwy 50 E", "Peppe''s", "Pueblo, CO 81006"]}, "phone": "+17199483305",
+        "display_phone": "(719) 948-3305", "distance": 5523.21506121497}], "total":
+        69, "region": {"center": {"longitude": -104.5733642578125, "latitude": 38.27035217485165}}}'
+  recorded_at: Tue, 26 Apr 2022 15:59:58 GMT
 recorded_with: VCR 6.1.0
