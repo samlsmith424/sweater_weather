@@ -91,4 +91,21 @@ RSpec.describe 'weather endpoint' do
       end
     end
   end
+
+  it 'returns an error if blank params are sent' do
+    VCR.use_cassette("no location given") do
+      location = ""
+      get "/api/v1/forecast?location="
+
+      expect(response).to have_http_status(:bad_request)
+    end
+  end
+
+  it 'returns an error if invalid params are sent' do
+    VCR.use_cassette("no location given") do
+      get "/api/v1/forecast?location"
+
+      expect(response).to have_http_status(:bad_request)
+    end
+  end
 end

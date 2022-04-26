@@ -53,7 +53,7 @@ RSpec.describe 'create user request' do
     body = {
       "email": "whatever@example.com",
       "password": "password",
-      "password_confirmation": "wrong_password"
+      "password_confirmation": "password"
     }
 
     post '/api/v1/users', :params => body.to_json , :headers => headers
