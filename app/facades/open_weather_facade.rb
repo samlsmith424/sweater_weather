@@ -3,4 +3,11 @@ class OpenWeatherFacade
     weather_data = OpenWeatherService.find_weather(latitude, longitude)
     ForecastPoro.new(weather_data)
   end
+
+  def self.get_future_weather(travel_time, destination_coords)
+    number_of_hours = travel_time.split(':')[0].to_i
+    weather_data = OpenWeatherService.find_weather(destination_coords.latitude, destination_coords.longitude)
+    data = ForecastPoro.new(weather_data)
+    temperature = data.hourly_weather[number_of_hours]
+  end
 end
