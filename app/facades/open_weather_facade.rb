@@ -8,6 +8,6 @@ class OpenWeatherFacade
     number_of_hours = travel_time.split(':')[0].to_i
     weather_data = OpenWeatherService.find_weather(destination_coords.latitude, destination_coords.longitude)
     data = ForecastPoro.new(weather_data)
-    temperature = data.hourly_weather[number_of_hours]
+    arrival_weather = data.all_weather_hours[number_of_hours]
   end
 end

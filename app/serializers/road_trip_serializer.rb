@@ -27,10 +27,10 @@ class RoadTripSerializer
           "start_city": origin,
           "end_city": destination,
           "travel_time": "impossible",
-          "weather_at_eta": {
-            "temperature": "",
-            "conditions": ""
-          }
+          # "weather_at_eta": {
+          #   "temperature": "",
+          #   "conditions": ""
+          # }
         }
       }
     }
