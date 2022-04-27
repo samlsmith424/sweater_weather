@@ -18,6 +18,7 @@ RSpec.describe 'create road_trip request' do
       expect(response).to be_successful
       parsed = JSON.parse(response.body, symbolize_names: true)
       expect(parsed).to be_a(Hash)
+      
       expect(parsed).to have_key(:data)
 
       expect(parsed[:data]).to have_key(:id)
