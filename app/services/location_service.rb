@@ -22,11 +22,6 @@ class LocationService
       require.params['key'] = ENV['mapquest_key']
     end
   end
-  # def self.conn
-  #   Faraday.new(url: "http://www.mapquestapi.com/geocoding/v1/") do |require|
-  #     require.params['key'] = ENV['mapquest_key']
-  #   end
-  # end
 
   def self.parse_json(response)
     JSON.parse(response.body, symbolize_names: true)
