@@ -26,7 +26,7 @@ class RoadTripSerializer
         "attributes": {
           "start_city": origin,
           "end_city": destination,
-          "travel_time": "impossible",
+          "travel_time": "impossible"
         }
       }
     }
