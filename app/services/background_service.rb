@@ -1,4 +1,5 @@
 class BackgroundService
+  
   def self.find_background(location)
     response = conn.get("/search/photos") do |require|
       require.params['client_id'] = ENV['unsplash_key']
