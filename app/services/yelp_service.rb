@@ -1,4 +1,5 @@
 class YelpService
+  
   def self.find_restaurant(food, destination)
     response = conn.get("v3/businesses/search") do |require|
       require.params['term'] = food
