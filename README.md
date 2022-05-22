@@ -3,7 +3,7 @@
 
 ### <ins>Overview</ins>
 
-Sweather Weather is a backend application that exposes several external API's to support an application for planning roadtrips based on weather conditions.
+Sweather Weather is a backend application that exposes multiple external API's to support an application for planning roadtrips based on weather conditions.
 
 ### Learning Goals
 - Expose an API that aggregates data from multiple external APIs
