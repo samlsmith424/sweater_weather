@@ -74,7 +74,7 @@ Sweather Weather is a backend application that exposes multiple external APIs to
 
 *Response*
 
-```
+```json
 {
   "data": {
     "id": null,
@@ -82,24 +82,19 @@ Sweather Weather is a backend application that exposes multiple external APIs to
     "attributes": {
       "current_weather": {
         "datetime": "2020-09-30 13:27:03 -0600",
-        "temperature": 79.4,
-        etc
+        "temperature": 79.4
       },
       "daily_weather": [
         {
           "date": "2020-10-01",
-          "sunrise": "2020-10-01 06:10:43 -0600",
-          etc
-        },
-        {...} etc
+          "sunrise": "2020-10-01 06:10:43 -0600"
+        }
       ],
       "hourly_weather": [
         {
           "time": "14:00:00",
-          "conditions": "cloudy with a chance of meatballs",
-          etc
-        },
-        {...} etc
+          "conditions": "cloudy with a chance of meatballs"
+        }
       ]
     }
   }
@@ -113,7 +108,7 @@ Sweather Weather is a backend application that exposes multiple external APIs to
 
 *Response*
 
-```
+```json
 {
   "data": {
     "type": "image",
@@ -139,7 +134,7 @@ Sweather Weather is a backend application that exposes multiple external APIs to
 ``POST /api/v1/users``
 
 Request body:
-```
+```json
 {
   "email": "whatever@example.com",
   "password": "password",
@@ -148,7 +143,7 @@ Request body:
 ```
 
 *Response*
-```
+```json
 {
   "data": {
     "type": "users",
@@ -168,7 +163,7 @@ Request body:
 `POST /api/v1/sessions`
 
 Request body:
-```
+```json
 {
   "email": "whatever@example.com",
   "password": "password"
@@ -176,7 +171,7 @@ Request body:
 ```
 
 *Response*
-```
+```json
 {
   "data": {
     "type": "users",
@@ -196,7 +191,7 @@ Request body:
 `POST /api/v1/road_trip`
 
 Request body:
-```
+```json
 {
   "origin": "Denver,CO",
   "destination": "Pueblo,CO",
@@ -205,7 +200,7 @@ Request body:
 ```
 
 *Response*
-```
+```json
 {
   "data": {
     "id": null,
