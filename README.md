@@ -3,14 +3,30 @@
 
 ### <ins>Overview</ins>
 
-Sweather Weather is a backend application that exposes multiple external APIs to support an application for planning roadtrips based on weather conditions.
+Sweather Weather is a backend application that exposes multiple external APIs to support an application for planning roadtrips based on weather conditions. The app makes it possible to plan better road trips by including the weather forecast at the destination city as well as Yelp restaurant suggestions. 
 
-### Learning Goals
-- Expose an API that aggregates data from multiple external APIs
-- Expose an API that requires an authentication token
-- Expose an API for CRUD functionality
-- Determine completion criteria based on the needs of other developers
-- Research, select, and consume an API based on your needs as a developer
+### Setup
+1. Fork and Clone the repo
+2. Install gem packages: `$ bundle install`
+3. Setup the database: `$ rails db:{create,migrate}`
+
+### API Setup
+1. Sign up for API keys from the following:
+*note* One API key will suffice for both MapQuest endpoints. The links provided will take you to the respective documentation pages.
+- MapQuest Geocoding API [here](https://developer.mapquest.com/documentation/geocoding-api/)
+- MapQuest Directions API [here](https://developer.mapquest.com/documentation/directions-api/)
+- OpenWeather One Call API [here](https://openweathermap.org/api/one-call-api)
+- Unsplash [here](https://unsplash.com/documentation#search-photos)
+- Yelp API key [here](https://www.yelp.com/developers/documentation/v3)
+2. From the command line, run the following: `$ bundle exec figaro install`
+3. Navigate to /config/application.yml
+4. Paste the following code and replace 'YOUR-API-KEY' with the respective credentials:
+  ```
+  mapquest_key: 'YOUR-API-KEY'
+  weather_key: 'YOUR-API-KEY'
+  unsplash_key: 'YOUR-API-KEY'
+  yelp_key: 'YOUR-API-KEY'
+  ```
 
 #### Framework
 <p>
@@ -42,26 +58,7 @@ Sweather Weather is a backend application that exposes multiple external APIs to
   <img src="https://img.shields.io/badge/faraday-b81818.svg?&style=flaste&logo=rubygems&logoColor=white" />
 </p>
 
-### Setup
-1. Fork and Clone the repo
-2. Install gem packages: `$ bundle install`
-3. Setup the database: `$ rails db:{drop,create,migrate}`
 
-### API Setup
-1. Sign up for API keys from the following:
-*note* One API key will suffice for both MapQuest endpoints. The links provided will take you to the respective documentation pages.
-- MapQuest Geocoding API [here](https://developer.mapquest.com/documentation/geocoding-api/)
-- MapQuest Directions API [here](https://developer.mapquest.com/documentation/directions-api/)
-- OpenWeather One Call API [here](https://openweathermap.org/api/one-call-api)
-- Unsplash [here](https://unsplash.com/documentation#search-photos)
-2. From the command line, run the following: `$ bundle exec figaro install`
-3. Navigate to /config/application.yml
-4. Paste the following code and replace 'YOUR-API-KEY' with the respective credentials:
-  ```
-  mapquest_id: 'YOUR-API-KEY'
-  weather_id: 'YOUR-API-KEY'
-  pexels: 'YOUR-API-KEY'
-  ```
   ![------------------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### Endpoints
