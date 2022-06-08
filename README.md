@@ -73,28 +73,121 @@ Sweather Weather is a backend application that exposes multiple external APIs to
 
 ```json
 {
-  "data": {
-    "id": null,
-    "type": "forecast",
-    "attributes": {
-      "current_weather": {
-        "datetime": "2020-09-30 13:27:03 -0600",
-        "temperature": 79.4
-      },
-      "daily_weather": [
-        {
-          "date": "2020-10-01",
-          "sunrise": "2020-10-01 06:10:43 -0600"
+    "data": {
+        "id": null,
+        "type": "forecast",
+        "attributes": {
+            "current_weather": {
+                "datetime": "2022-06-07 22:32:53 -0700",
+                "sunrise": "2022-06-07 04:32:14 -0700",
+                "sunset": "2022-06-07 19:25:42 -0700",
+                "temperature": 58.6,
+                "feels_like": 57.16,
+                "humidity": 64,
+                "uvi": 0,
+                "visibility": 10000,
+                "conditions": "broken clouds",
+                "icon": "04n"
+            },
+            "daily_weather": [
+                {
+                    "date": "2022-06-07",
+                    "sunrise": "2022-06-07 04:32:14 -0700",
+                    "sunset": "2022-06-07 19:25:42 -0700",
+                    "max_temp": 80.56,
+                    "min_temp": 55.71,
+                    "conditions": "light rain",
+                    "icon": "10d"
+                },
+                {
+                    "date": "2022-06-08",
+                    "sunrise": "2022-06-08 04:32:01 -0700",
+                    "sunset": "2022-06-08 19:26:16 -0700",
+                    "max_temp": 81.36,
+                    "min_temp": 55.85,
+                    "conditions": "scattered clouds",
+                    "icon": "03d"
+                },
+                {
+                    "date": "2022-06-09",
+                    "sunrise": "2022-06-09 04:31:51 -0700",
+                    "sunset": "2022-06-09 19:26:49 -0700",
+                    "max_temp": 90.37,
+                    "min_temp": 63.5,
+                    "conditions": "overcast clouds",
+                    "icon": "04d"
+                },
+                {
+                    "date": "2022-06-10",
+                    "sunrise": "2022-06-10 04:31:42 -0700",
+                    "sunset": "2022-06-10 19:27:21 -0700",
+                    "max_temp": 91.92,
+                    "min_temp": 63.21,
+                    "conditions": "scattered clouds",
+                    "icon": "03d"
+                },
+                {
+                    "date": "2022-06-11",
+                    "sunrise": "2022-06-11 04:31:35 -0700",
+                    "sunset": "2022-06-11 19:27:50 -0700",
+                    "max_temp": 92.66,
+                    "min_temp": 69.24,
+                    "conditions": "clear sky",
+                    "icon": "01d"
+                }
+            ],
+            "hourly_weather": [
+                {
+                    "time": "22:00:00",
+                    "temperature": 59.65,
+                    "conditions": "light rain",
+                    "icon": "10n"
+                },
+                {
+                    "time": "23:00:00",
+                    "temperature": 58.6,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "00:00:00",
+                    "temperature": 58.62,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "01:00:00",
+                    "temperature": 57.88,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "02:00:00",
+                    "temperature": 57.29,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "03:00:00",
+                    "temperature": 56.52,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "04:00:00",
+                    "temperature": 55.85,
+                    "conditions": "broken clouds",
+                    "icon": "04n"
+                },
+                {
+                    "time": "05:00:00",
+                    "temperature": 56.12,
+                    "conditions": "broken clouds",
+                    "icon": "04d"
+                }
+            ]
         }
-      ],
-      "hourly_weather": [
-        {
-          "time": "14:00:00",
-          "conditions": "cloudy with a chance of meatballs"
-        }
-      ]
     }
-  }
 }
 ```
 #### Retrieve background image for a city:
