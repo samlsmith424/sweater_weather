@@ -194,27 +194,26 @@ Sweather Weather is a backend application that exposes multiple external APIs to
 
 *Request*
 
-`GET /api/v1/backgrounds?location=denver,co`
+`GET /api/v1/backgrounds?location=sacramento`
 
 *Response*
 
 ```json
 {
-  "data": {
-    "type": "image",
-    "id": null,
-    "attributes": {
-      "image": {
-        "location": "denver,co",
-        "image_url": "https://pixabay.com/get/54e6d4444f50a814f1dc8460962930761c38d6ed534c704c7c2878dd954dc451_640.jpg",
-        "credit": {
-          "source": "unsplash.com",
-          "author": "quinntheislander",
-          "logo": "https://unplash.com/static/img/logo_square.png"
+    "data": {
+        "type": "image",
+        "id": null,
+        "attributes": {
+            "image": {
+                "location": "Sacramento ",
+                "image_url": "https://images.unsplash.com/photo-1606188476311-f943475a7e1f?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjIxODV8MHwxfHNlYXJjaHwxfHxzYWNyYW1lbnRvfGVufDB8fHx8MTY1NDY2NzA4Nw&ixlib=rb-1.2.1&q=80",
+                "credit": {
+                    "source": "unsplash.com",
+                    "author": "Stephen Leonardi"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 #### Register as a user:
